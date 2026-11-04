@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "GA4 Page Links",
+  "version": "0.2.0",
+  "minimum_chrome_version": "114",
+  "description": "Abrí las rutas de GA4 en tu sitio, administrá dominios por propiedad y revisá tu medición con CookingMetrics · martingaray.com.ar.",
+  "author": "Martin Garay · CookingMetrics",
+  "homepage_url": "https://github.com/martingaray/ga4-page-links",
+  "permissions": ["storage", "sidePanel"],
+  "side_panel": { "default_path": "sidepanel/panel.html" },
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_title": "GA4 Page Links",
+    "default_icon": { "16": "assets/icons/icon16.png", "32": "assets/icons/icon32.png", "48": "assets/icons/icon48.png", "128": "assets/icons/icon128.png" }
+  },
+  "icons": { "16": "assets/icons/icon16.png", "32": "assets/icons/icon32.png", "48": "assets/icons/icon48.png", "128": "assets/icons/icon128.png" },
+  "content_scripts": [{
+    "matches": ["https://analytics.google.com/*"],
+    "js": ["shared/core.js", "content/content.js"],
+    "css": ["content/content.css"],
+    "run_at": "document_idle"
+  }]
+}

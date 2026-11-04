@@ -1,0 +1,17 @@
+a[data-ga4-page-link] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  margin-inline-start: .35rem !important;
+  border-radius: .25rem !important;
+  background: #e3edff !important;
+  color: #0b5fea !important;
+  font: 600 1rem/1 system-ui, sans-serif !important;
+  text-decoration: none !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+}
+a[data-ga4-page-link]:hover { background: #c9ddff !important; }
+a[data-ga4-page-link]:focus-visible { outline: 2px solid #0b5fea !important; outline-offset: 2px !important; }
